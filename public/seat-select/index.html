@@ -10,10 +10,20 @@
         <div class='main'>
             <header class='header'>
                 <h1 class='header-logo'>Air Slingshot</h1>
+            </header>
             </div>
             <div class="flight-select">
-                <label for="flight">Flight Number :</label>
+                <form id='flight-form'></form>
+                    <label for="flight">Flight Number :
+                        <select id="flightsFound" name="flightsFound" class='letter-select'>
+                            <!-- Options will be added here via js -->
+                        </select>
+                    </label>
+                    <button id='get-flights-button' onclick="handleAskServerForFlights(event)" type="submit">Find seating</button>
+                </form>
+                <button id='find-button' onclick="goToFindReservation(event)">Find Reservation</button>
                 <input name="flight" id="flight" class="flight" type="text" placeholder="flight #" />
+                <div id='failedFlightNumber'>Invalid flight number, please try agian [Number should look like: SA###]</div>
             </div>
             <div class="form-container">
                 <h2>Select your seat and Provide your information!</h2>

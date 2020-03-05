@@ -10,14 +10,19 @@
         <div class='main'>
             <header class='header'>
                 <h1 class='header-logo'>Air Slingshot</h1>
+            </header>
+            <div class="flight-select">
+                <button id='book-button' onclick="goToMakeReservation(event)">Make Another Reservation</button>
+                <button id='find-button' onclick="goToFindReservation(event)">Find Reservation</button>
             </div>
             <div class="content confirmation">
                 <div class="user">
                     <p class="message">Your flight is confirmed!</p>
                     <ul class="user-info">
-                        <li>Flight #:<span id="flight"></span> seat #: <span id="seat"></span></li>
+                        <li>Flight #:<span id="flightNum"></span> seat #: <span id="seat"></span></li>
                         <li>Name:<span id="name"></span></li>
                         <li>Email:<span id="email"></span></li>
+                        <li>id:<span id="id"></span></li>
                     </ul>
                 </div>
                 <div class="tombstone"></div>

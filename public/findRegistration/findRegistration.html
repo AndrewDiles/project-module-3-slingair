@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0, minimal-ui" />
+        <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+        <title>Find your registration</title>
+    </head>
+    <body>
+        <div class='main'>
+            <header class='header'>
+                <h1 class='header-logo'>Air Slingshot</h1>
+            </div>
+            <div class="flight-select">
+                <div>
+                    <label for="flight">ID #:</label>
+                    <input name="flight" id="flight" class="flight" type="text" placeholder="please enter id# here" />
+                </div>
+                <div id='failedid'>Invalid id number, please try agian.</div>
+                <button id='book-button' onclick="goToMakeReservation(event)">Make Another Reservation</button>
+            </div>
+            <div class="content confirmation">
+                <div class="user">
+                    <p class="message">Enter your ID number to find your reservation!</p>
+                    <ul class="user-info">
+                        <li>Flight #:<span id="flightNum"></span> seat #: <span id="seat"></span></li>
+                        <li>Name:<span id="name"></span></li>
+                        <li>Email:<span id="email"></span></li>
+                        <li>id:<span id="id"></span></li>
+                    </ul>
+                </div>
+                <div class="tombstone"></div>
+            </div>
+        </div>
+        <p class='footer-logo'>The only way to die!</p>
+        <script src="./js/findRegistration.js"></script>
+    </body>
+</html>

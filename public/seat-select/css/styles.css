@@ -24,6 +24,8 @@ main {
     background: var(--alabama-crimson);
     height: 120px;
     padding: var(--page-padding) 18px;
+    display: flex;
+    justify-content: space-between;
 }
 .content {
     flex: 1 0 auto;
@@ -80,11 +82,36 @@ p, a, li, blockquote, input {
     align-items: center;
     padding: var(--page-padding);
     margin-bottom: var(--page-padding);
+    display: flex;
+    justify-content: space-between;
 }
 .flight-select input {
     width: 125px;
     margin-left: var(--page-padding);
 }
+
+#flightsFound {
+    width: 125px;
+    height: 40px;
+}
+#flight {
+    display:none;
+}
+
+#get-flights-button, #find-button, #book-button {
+    background: var(--alabama-crimson);
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 24px;
+    width: 30%;
+    margin-left: 25px;
+}
+
+
+
 
 input {
     font-size: 24px;
@@ -260,3 +287,10 @@ input {
 }
 
 .form-container { display: none; }
+
+#failedFlightNumber {
+    margin-left: 10px;
+    color: white;
+    font-family: var(--content-font);
+    display: none;
+}
